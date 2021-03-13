@@ -8,7 +8,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from script import script
 
 
-@Client.on_message(filters.command(["start"]) & filters.me)
+@Client.on_message(filters.command(["startprvt"]) & filters.private)
 async def start(client, message):
     try:
         await message.reply_text(
@@ -31,7 +31,7 @@ async def start(client, message):
     except:
         pass
 
-@Client.on_message(filters.command(["helpp"]) & filters.private)
+@Client.on_message(filters.command(["helpprvt"]) & filters.private)
 async def help(client, message):
     try:
         await message.reply_text(
@@ -54,7 +54,7 @@ async def help(client, message):
     except:
         pass
 
-@Client.on_message(filters.command(["about"]) & filters.private)
+@Client.on_message(filters.command(["aboutprvt"]) & filters.private)
 async def about(client, message):
     try:
         await message.reply_text(
