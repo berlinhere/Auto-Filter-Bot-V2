@@ -31,7 +31,7 @@ async def start(client, message):
     except:
         pass
 
-@Client.on_message(filters.command(["help"]) & filters.private)
+@Client.on_message(filters.command(["helpp"]) & filters.private)
 async def help(client, message):
     try:
         await message.reply_text(
